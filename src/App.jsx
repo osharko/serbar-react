@@ -1,15 +1,14 @@
-import copertina from './assets/copertina.jpg';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Homepage } from './homepage/Home';
 
 function App() {
   return (
-    <>
-      <div class="place-items-center">
-        <h1 class="text-3xl my-20">
-          Sito in costruzione, vi preghiamo di tornare presto.
-        </h1>
-        <img src={copertina} class="w-lg " alt="Vite logo" />
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" replace />} />
+        <Route path="/home" element={<Homepage />} />
+      </Routes>
+    </Router>
   );
 }
 
