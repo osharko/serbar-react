@@ -8,7 +8,7 @@ import { Schedule } from './Schedule';
 
 export function Homepage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-background-light)' }}>
       <Navbar />
 
       {/* Banner with Auto-scrolling Carousel */}

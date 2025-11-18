@@ -5,9 +5,20 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Palette Colori Serbar - Kung Fu Academy */
+  --color-brand-primary: #065f46; /* Rosso bordò principale */
+  --color-brand-dark: #10b981; /* Rosso scuro intenso */
+  --color-accent-gold: #d4af37; /* Oro per accenti */
+  --color-background-light: #f9f7f4; /* Crema chiaro per sfondi */
+  --color-background-alt: #e8e6e3; /* Grigio beige per sezioni alternate */
+  --color-text-primary: #1f1f1f; /* Nero per testi principali */
+  --color-text-secondary: #4a4a4a; /* Grigio scuro per testi secondari */
+  --color-white: #ffffff; /* Bianco puro */
+  --color-shadow: rgba(0, 0, 0, 0.1); /* Ombra leggera */
+
+  color-scheme: light;
+  color: var(--color-text-primary);
+  background-color: var(--color-background-light);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

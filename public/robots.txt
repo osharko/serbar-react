@@ -1,0 +1,28 @@
+# robots.txt per Ser.Bar. Kung Fu Academy
+# Ottimizzato per SEO
+
+User-agent: *
+Allow: /
+
+# Sitemap (aggiorna con l'URL reale quando disponibile)
+Sitemap: https://www.serbar.it/sitemap.xml
+
+# Regole specifiche per Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Regole per altri crawler popolari
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Blocca l'accesso ai file di sistema
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.config.js$
