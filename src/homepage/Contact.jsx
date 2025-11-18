@@ -32,7 +32,7 @@ export function Contact() {
             style={{ boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)' }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2972.834634494447!2d13.88378!3d42.944166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132e700d4c7b4e89%3A0x5f6c3e3b4c7b4e89!2sPalazzetto%20dello%20Sport%20San%20Benedetto%20del%20Tronto!5e0!3m2!1sit!2sit!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5842.689390930962!2d13.891645599999999!3d42.928859599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1331f54273b46b23%3A0x5ae7fab0dd058e48!2sPalazzetto%20dello%20Sport%20%22Bernardo%20Speca%22!5e0!3m2!1sit!2sit!4v1763474745238!5m2!1sit!2sit"
               width="100%"
               height="300"
               className="md:h-[400px]"

@@ -17,7 +17,7 @@ export function About() {
             className="text-base md:text-lg leading-relaxed"
             style={{ color: 'var(--color-text-secondary)' }}
           >
-            Benvenuti da Ser.Bar., dove le antiche tradizioni delle arti
+            Benvenuti alla Ser.Bar., dove le antiche tradizioni delle arti
             marziali incontrano metodi di allenamento moderni. I nostri maestri
             esperti guidano gli studenti attraverso un percorso di crescita
             personale, fitness fisico e disciplina mentale.
