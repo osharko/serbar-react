@@ -36,7 +36,7 @@ export function HomepageBanner() {
             style={{ color: 'var(--color-white)' }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 drop-shadow-lg">
-              L'Arte del Kung Fu
+              Kung Fu a San Benedetto del Tronto
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 drop-shadow-lg">
               Disciplina • Forza • Armonia
