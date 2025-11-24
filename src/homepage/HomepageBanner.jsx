@@ -1,6 +1,46 @@
-import bannerImage from '../assets/banner.webp';
+import { useState, useEffect } from 'react';
+
+// Define your image names here
+const imageNames = ['banner.webp'];
+
+// Dynamically import all images
+const images = imageNames.map((name) => ({
+  mobile: new URL(`../assets/mobile/${name}`, import.meta.url).href,
+  desktop: new URL(`../assets/desktop/${name}`, import.meta.url).href,
+}));
 
 export function HomepageBanner() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  // Handle responsive image switching
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 767px)');
+
+    const updateBreakpoint = () => {
+      setIsDesktop(mediaQuery.matches);
+    };
+
+    updateBreakpoint();
+    mediaQuery.addEventListener('change', updateBreakpoint);
+
+    return () => mediaQuery.removeEventListener('change', updateBreakpoint);
+  }, []);
+
+  // Carousel auto-play
+  useEffect(() => {
+    if (images.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentImage = images[currentIndex];
+  const bannerImage = isDesktop ? currentImage.desktop : currentImage.mobile;
+
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -19,6 +59,7 @@ export function HomepageBanner() {
               objectPosition: 'center center',
             }}
           />
+
           {/* Overlay gradient per leggibilità testo */}
           <div
             className="absolute inset-0"
@@ -35,8 +76,8 @@ export function HomepageBanner() {
             className="text-center max-w-4xl mx-auto"
             style={{ color: 'var(--color-white)' }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 drop-shadow-lg">
-              Kung Fu a San Benedetto del Tronto
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 drop-shadow-lg font-kungfu">
+              KUNG FU A SAN BENEDETTO DEL TRONTO
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 drop-shadow-lg">
               Disciplina • Forza • Armonia

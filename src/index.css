@@ -1,5 +1,18 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Shojumaru-Regular';
+  src: url('./assets/fonts/Shojumaru-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-kungfu {
+  font-family:
+    'Shojumaru-Regular', system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

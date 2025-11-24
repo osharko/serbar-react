@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logoSerbar from '../assets/logoserbar.png';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,16 +15,31 @@ export function Navbar() {
     { id: 'about', label: 'Chi Siamo' },
     { id: 'classes', label: 'Corsi' },
     { id: 'schedule', label: 'Orari' },
-    { id: 'contact', label: 'Contatti' }
+    { id: 'contact', label: 'Contatti' },
   ];
 
   return (
     <>
       {/* Navbar */}
-      <nav className="shadow-lg fixed w-full z-50" style={{ backgroundColor: 'var(--color-brand-primary)', color: 'var(--color-white)' }}>
-        <div className="container mx-auto px-4 py-4">
+      <nav
+        className="shadow-lg fixed w-full z-50"
+        style={{
+          backgroundColor: 'var(--color-brand-primary)',
+          color: 'var(--color-white)',
+        }}
+      >
+        <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">Ser.Bar.</h1>
+            <h1 className="text-2xl font-bold">
+              <img
+                src={logoSerbar}
+                alt="Ser.Bar. Kung Fu San Benedetto del Tronto"
+                className="h-[75px] lg:h-[50px] object-cover object-center"
+                style={{
+                  objectPosition: 'center center',
+                }}
+              />
+            </h1>
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex space-x-6">
@@ -31,10 +47,14 @@ export function Navbar() {
                 <li key={item.id}>
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="transition hover:opacity-80"
+                    className="transition hover:opacity-80 font-kungfu"
                     style={{ color: 'var(--color-white)' }}
-                    onMouseEnter={(e) => e.target.style.color = 'var(--color-accent-gold)'}
-                    onMouseLeave={(e) => e.target.style.color = 'var(--color-white)'}
+                    onMouseEnter={(e) =>
+                      (e.target.style.color = 'var(--color-accent-gold)')
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.color = 'var(--color-white)')
+                    }
                   >
                     {item.label}
                   </button>
@@ -53,21 +73,25 @@ export function Navbar() {
                 className="block w-6 h-0.5 transition-all duration-300"
                 style={{
                   backgroundColor: 'var(--color-white)',
-                  transform: isMenuOpen ? 'rotate(45deg) translateY(8px)' : 'none'
+                  transform: isMenuOpen
+                    ? 'rotate(45deg) translateY(8px)'
+                    : 'none',
                 }}
               ></span>
               <span
                 className="block w-6 h-0.5 transition-all duration-300"
                 style={{
                   backgroundColor: 'var(--color-white)',
-                  opacity: isMenuOpen ? 0 : 1
+                  opacity: isMenuOpen ? 0 : 1,
                 }}
               ></span>
               <span
                 className="block w-6 h-0.5 transition-all duration-300"
                 style={{
                   backgroundColor: 'var(--color-white)',
-                  transform: isMenuOpen ? 'rotate(-45deg) translateY(-8px)' : 'none'
+                  transform: isMenuOpen
+                    ? 'rotate(-45deg) translateY(-8px)'
+                    : 'none',
                 }}
               ></span>
             </button>
@@ -87,14 +111,18 @@ export function Navbar() {
                     className="block w-full text-left px-4 py-3 transition rounded"
                     style={{
                       color: 'var(--color-white)',
-                      backgroundColor: isMenuOpen ? 'rgba(255, 255, 255, 0.1)' : 'transparent'
+                      backgroundColor: isMenuOpen
+                        ? 'rgba(255, 255, 255, 0.1)'
+                        : 'transparent',
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                      e.target.style.backgroundColor =
+                        'rgba(255, 255, 255, 0.2)';
                       e.target.style.color = 'var(--color-accent-gold)';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                      e.target.style.backgroundColor =
+                        'rgba(255, 255, 255, 0.1)';
                       e.target.style.color = 'var(--color-white)';
                     }}
                   >
