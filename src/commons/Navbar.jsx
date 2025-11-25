@@ -30,7 +30,7 @@ export function Navbar() {
       >
         <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">
+            <div className="text-2xl font-bold">
               <img
                 src={logoSerbar}
                 alt="Ser.Bar. Kung Fu San Benedetto del Tronto"
@@ -39,7 +39,7 @@ export function Navbar() {
                   objectPosition: 'center center',
                 }}
               />
-            </h1>
+            </div>
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex space-x-6">
