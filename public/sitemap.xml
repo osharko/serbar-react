@@ -1,49 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- Sitemap ottimizzato per Ser.Bar. Kung Fu Academy -->
-
-<!-- Homepage principale -->
-<url>
-  <loc>https://serbar.it/</loc>
-  <lastmod>2025-11-18T20:56:55+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>1.0</priority>
-</url>
-
-<!-- Sezione Chi Siamo / About -->
-<url>
-  <loc>https://serbar.it/#about</loc>
-  <lastmod>2025-11-18T20:56:55+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<!-- Sezione Corsi / Classes -->
-<url>
-  <loc>https://serbar.it/#classes</loc>
-  <lastmod>2025-11-18T20:56:55+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.9</priority>
-</url>
-
-<!-- Sezione Orari / Schedule -->
-<url>
-  <loc>https://serbar.it/#schedule</loc>
-  <lastmod>2025-11-18T20:56:55+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.7</priority>
-</url>
-
-<!-- Sezione Contatti / Contact -->
-<url>
-  <loc>https://serbar.it/#contact</loc>
-  <lastmod>2025-11-18T20:56:55+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Sitemap per Ser.Bar. Kung Fu Academy -->
+  <!-- Single Page Application - unica pagina principale -->
+  <url>
+    <loc>https://serbar.it/</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>

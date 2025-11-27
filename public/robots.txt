@@ -4,8 +4,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap (aggiorna con l'URL reale quando disponibile)
-Sitemap: https://www.serbar.it/sitemap.xml
+# Sitemap
+Sitemap: https://serbar.it/sitemap.xml
 
 # Regole specifiche per Google
 User-agent: Googlebot
