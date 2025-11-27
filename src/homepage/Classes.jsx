@@ -1,3 +1,5 @@
+import { ClassCard } from './schedule/ClassCard';
+
 export function Classes() {
   return (
     <section
@@ -10,74 +12,32 @@ export function Classes() {
           className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 font-kungfu"
           style={{ color: 'var(--color-brand-primary)' }}
         >
-          I nostri corsi
+          I NOSTRI CORSI
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <div
-            className="p-6 rounded-lg"
-            style={{
-              backgroundColor: 'var(--color-white)',
-              boxShadow: '0 10px 15px -3px var(--color-shadow)',
-            }}
-          >
-            <h3
-              className="text-xl md:text-2xl font-bold mb-4 text-center"
-              style={{ color: 'var(--color-brand-primary)' }}
-            >
-              Kung Fu - Qi Xing Tang Lang Quan
-            </h3>
-            <p
-              className="text-sm md:text-base"
-              style={{ color: 'var(--color-text-secondary)' }}
-            >
-              Kung-fu per adulti e bambini, Qi xin tang lang quan, la mantide
-              religiosa 7 stelle, educazione fisica, mentale e spirituale!
-            </p>
-          </div>
-          <div
-            className="p-6 rounded-lg"
-            style={{
-              backgroundColor: 'var(--color-white)',
-              boxShadow: '0 10px 15px -3px var(--color-shadow)',
-            }}
-          >
-            <h3
-              className="text-xl md:text-2xl font-bold mb-4 text-center"
-              style={{ color: 'var(--color-brand-primary)' }}
-            >
-              Taijiquan - Stile Yang
-            </h3>
-            <p
-              className="text-sm md:text-base"
-              style={{ color: 'var(--color-text-secondary)' }}
-            >
-              Il Taiji quan, la vetta, l’arte millenaria per affrontare lo
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <ClassCard
+            key="1"
+            name="Kung Fu - Qi Xing Tang Lang Quan"
+            time="Kung-fu per adulti e bambini, Qi xin tang lang quan, la mantide
+              religiosa 7 stelle, educazione fisica, mentale e spirituale!"
+            type="adults"
+          />
+          <ClassCard
+            key="1"
+            name="Taijiquan - Stile Yang"
+            time="Il Taiji quan, la vetta, l’arte millenaria per affrontare lo
               stress della vita moderna con armonia, equilibrio e
-              consapevolezza!
-            </p>
-          </div>
-          <div
-            className="p-6 rounded-lg"
-            style={{
-              backgroundColor: 'var(--color-white)',
-              boxShadow: '0 10px 15px -3px var(--color-shadow)',
-            }}
-          >
-            <h3
-              className="text-xl md:text-2xl font-bold mb-4 text-center"
-              style={{ color: 'var(--color-brand-primary)' }}
-            >
-              Difesa Personale - M.P.F.
-            </h3>
-            <p
-              className="text-sm md:text-base"
-              style={{ color: 'var(--color-text-secondary)' }}
-            >
-              M.P.F., la difesa personale specifica per uomini e donne.
+              consapevolezza!"
+            type="taiji"
+          />
+          <ClassCard
+            key="1"
+            name="Difesa Personale - M.P.F."
+            time="M.P.F., la difesa personale specifica per uomini e donne.
               Presenza, disciplina, costanza, insita naturalmente nell’uomo.
-              Basta risvegliare il fuoco dentro te!
-            </p>
-          </div>
+              Basta risvegliare il fuoco dentro te!"
+            type="defense"
+          />
         </div>
       </div>
     </section>

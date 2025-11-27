@@ -5,7 +5,7 @@ import { About } from './About';
 import { Classes } from './Classes';
 import { Contact } from './Contact';
 import { HomepageBanner } from './HomepageBanner';
-import { Schedule } from './Schedule';
+import { Schedule } from './schedule';
 
 export function Homepage() {
   // Remove SEO fallback content when React mounts

@@ -18,16 +18,75 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* Palette Colori Serbar - Kung Fu Academy */
-  --color-brand-primary: #065f46; /* Rosso bordò principale */
-  --color-brand-dark: #10b981; /* Rosso scuro intenso */
-  --color-accent-gold: #d4af37; /* Oro per accenti */
-  --color-background-light: #f9f7f4; /* Crema chiaro per sfondi */
-  --color-background-alt: #e8e6e3; /* Grigio beige per sezioni alternate */
-  --color-text-primary: #1f1f1f; /* Nero per testi principali */
-  --color-text-secondary: #4a4a4a; /* Grigio scuro per testi secondari */
-  --color-white: #ffffff; /* Bianco puro */
-  --color-shadow: rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  /* ============================================ */
+  /* PALETTE BASE - Tutti i colori definiti qui */
+  /* ============================================ */
+
+  /* Verdi */
+  --palette-green-900: #065f46;
+  --palette-green-500: #10b981;
+  --palette-green-100: #d1fae5;
+
+  /* Oro e Neutri */
+  --palette-gold-500: #d4af37;
+  --palette-cream-100: #f9f7f4;
+  --palette-beige-200: #e8e6e3;
+  --palette-black-900: #1f1f1f;
+  --palette-gray-700: #4a4a4a;
+  --palette-white: #ffffff;
+
+  /* Gialli (Bimbi) */
+  --palette-yellow-100: #fef3c7;
+  --palette-yellow-900: #92400e;
+  --palette-yellow-500: #f59e0b;
+
+  /* Blu (Adulti) */
+  --palette-blue-100: #dbeafe;
+  --palette-blue-900: #1e3a8a;
+  --palette-blue-500: #3b82f6;
+
+  /* Rosa (Difesa) */
+  --palette-orange-100: #ffedd5;
+  --palette-orange-900: #7c2d12;
+  --palette-orange-500: #f97316;
+
+  /* Ombre */
+  --palette-shadow: rgba(0, 0, 0, 0.1);
+
+  /* ============================================ */
+  /* COLORI SEMANTICI - Riutilizzano la palette */
+  /* ============================================ */
+
+  /* Brand e UI */
+  --color-brand-primary: var(--palette-green-900);
+  --color-brand-dark: var(--palette-green-500);
+  --color-accent-gold: var(--palette-gold-500);
+  --color-background-light: var(--palette-cream-100);
+  --color-background-alt: var(--palette-beige-200);
+  --color-text-primary: var(--palette-black-900);
+  --color-text-secondary: var(--palette-gray-700);
+  --color-white: var(--palette-white);
+  --color-shadow: var(--palette-shadow);
+
+  /* Corsi - Kung Fu Bimbi */
+  --color-class-kids-bg: var(--palette-yellow-100);
+  --color-class-kids-text: var(--palette-yellow-900);
+  --color-class-kids-border: var(--palette-yellow-500);
+
+  /* Corsi - Kung Fu Adulti */
+  --color-class-adults-bg: var(--palette-green-100);
+  --color-class-adults-text: var(--palette-green-900);
+  --color-class-adults-border: var(--palette-green-500);
+
+  /* Corsi - Taiji Chuan */
+  --color-class-taiji-bg: var(--palette-blue-100);
+  --color-class-taiji-text: var(--palette-blue-900);
+  --color-class-taiji-border: var(--palette-blue-500);
+
+  /* Corsi - Difesa Personale */
+  --color-class-defense-bg: var(--palette-orange-100);
+  --color-class-defense-text: var(--palette-orange-900);
+  --color-class-defense-border: var(--palette-orange-500);
 
   color-scheme: light;
   color: var(--color-text-primary);

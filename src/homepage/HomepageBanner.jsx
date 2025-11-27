@@ -76,9 +76,9 @@ export function HomepageBanner() {
             className="text-center max-w-4xl mx-auto"
             style={{ color: 'var(--color-white)' }}
           >
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 drop-shadow-lg font-kungfu">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 drop-shadow-lg font-kungfu">
               KUNG FU A SAN BENEDETTO DEL TRONTO
-            </h2>
+            </h1>
             <p className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 drop-shadow-lg">
               Disciplina • Forza • Armonia
             </p>
@@ -89,7 +89,7 @@ export function HomepageBanner() {
             </p>
             <button
               onClick={scrollToContact}
-              className="px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold transition shadow-lg"
+              className="px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold transition shadow-lg font-kungfu"
               style={{
                 backgroundColor: 'var(--color-brand-primary)',
                 color: 'var(--color-white)',

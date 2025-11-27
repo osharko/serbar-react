@@ -1,3 +1,5 @@
+import { DaySchedule } from './DaySchedule';
+
 export function Schedule() {
   const scheduleData = [
     {
@@ -29,10 +31,26 @@ export function Schedule() {
 
   const getClassColor = (type) => {
     const colors = {
-      kids: { bg: '#FEF3C7', text: '#92400E', border: '#F59E0B' },
-      adults: { bg: '#DBEAFE', text: '#1E3A8A', border: '#3B82F6' },
-      taiji: { bg: '#D1FAE5', text: '#065F46', border: '#10B981' },
-      defense: { bg: '#FCE7F3', text: '#831843', border: '#EC4899' },
+      kids: {
+        bg: 'var(--color-class-kids-bg)',
+        text: 'var(--color-class-kids-text)',
+        border: 'var(--color-class-kids-border)',
+      },
+      adults: {
+        bg: 'var(--color-class-adults-bg)',
+        text: 'var(--color-class-adults-text)',
+        border: 'var(--color-class-adults-border)',
+      },
+      taiji: {
+        bg: 'var(--color-class-taiji-bg)',
+        text: 'var(--color-class-taiji-text)',
+        border: 'var(--color-class-taiji-border)',
+      },
+      defense: {
+        bg: 'var(--color-class-defense-bg)',
+        text: 'var(--color-class-defense-text)',
+        border: 'var(--color-class-defense-border)',
+      },
     };
     return colors[type];
   };
@@ -48,7 +66,7 @@ export function Schedule() {
           className="text-3xl md:text-4xl font-bold text-center mb-3 md:mb-4 font-kungfu"
           style={{ color: 'var(--color-brand-primary)' }}
         >
-          Orari dei Corsi
+          ORARI DEI CORSI
         </h2>
         <p
           className="text-center mb-8 md:mb-12 text-sm md:text-base"
@@ -60,68 +78,11 @@ export function Schedule() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {scheduleData.map((daySchedule, index) => (
-              <div
+              <DaySchedule
                 key={index}
-                className="p-4 md:p-6 rounded-lg"
-                style={{
-                  backgroundColor: 'var(--color-background-light)',
-                  border: '2px solid var(--color-background-alt)',
-                  boxShadow: '0 4px 6px -1px var(--color-shadow)',
-                }}
-              >
-                <h3
-                  className="text-xl md:text-2xl font-bold mb-3 md:mb-4 pb-2"
-                  style={{
-                    color: 'var(--color-brand-primary)',
-                    borderBottom: '2px solid var(--color-accent-gold)',
-                  }}
-                >
-                  {daySchedule.day}
-                </h3>
-                <div className="space-y-2 md:space-y-3">
-                  {daySchedule.classes.map((classItem, classIndex) => {
-                    const colors = getClassColor(classItem.type);
-                    return (
-                      <div
-                        key={classIndex}
-                        className="p-3 md:p-4 rounded-lg"
-                        style={{
-                          backgroundColor: colors.bg,
-                          borderLeft: `4px solid ${colors.border}`,
-                          transition: 'transform 0.2s',
-                        }}
-                        onMouseEnter={(e) =>
-                          (e.currentTarget.style.transform = 'translateX(5px)')
-                        }
-                        onMouseLeave={(e) =>
-                          (e.currentTarget.style.transform = 'translateX(0)')
-                        }
-                      >
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <h4
-                              className="font-bold text-base md:text-lg"
-                              style={{ color: colors.text }}
-                            >
-                              {classItem.name}
-                            </h4>
-                            <p
-                              className="text-xs md:text-sm font-semibold mt-1"
-                              style={{ color: colors.text, opacity: 0.8 }}
-                            >
-                              {classItem.time}
-                            </p>
-                          </div>
-                          <div
-                            className="w-2 h-2 md:w-3 md:h-3 rounded-full flex-shrink-0"
-                            style={{ backgroundColor: colors.border }}
-                          ></div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+                day={daySchedule.day}
+                classes={daySchedule.classes}
+              />
             ))}
           </div>
 

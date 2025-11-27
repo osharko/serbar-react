@@ -8,7 +8,7 @@ export function Footer() {
       }}
     >
       <div className="container mx-auto px-4 text-center">
-        <p>&copy; 2025 Ser.Bar.</p>
+        <p>M° Serafino Barboni</p>
       </div>
     </footer>
   );
