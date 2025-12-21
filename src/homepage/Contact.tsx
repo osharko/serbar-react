@@ -54,7 +54,7 @@ export function Contact() {
                   height="300"
                   className="md:h-[400px]"
                   style={{ border: 0 }}
-                  allowFullScreen=""
+                  allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Mappa Ser.Bar. - Palazzetto dello Sport San Benedetto del Tronto"
@@ -73,12 +73,12 @@ export function Contact() {
                   color: 'var(--color-brand-primary)',
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = 'var(--color-accent-gold)';
-                  e.target.style.color = 'var(--color-brand-dark)';
+                  (e.target as HTMLAnchorElement).style.backgroundColor = 'var(--color-accent-gold)';
+                  (e.target as HTMLAnchorElement).style.color = 'var(--color-brand-dark)';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = 'var(--color-white)';
-                  e.target.style.color = 'var(--color-brand-primary)';
+                  (e.target as HTMLAnchorElement).style.backgroundColor = 'var(--color-white)';
+                  (e.target as HTMLAnchorElement).style.color = 'var(--color-brand-primary)';
                 }}
               >
                 Apri in Google Maps

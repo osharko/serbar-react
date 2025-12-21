@@ -4,7 +4,7 @@ import logoSerbar from '../assets/logoserbar.png';
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId:string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false); // Chiudi il menu dopo il click
@@ -50,10 +50,10 @@ export function Navbar() {
                     className="transition hover:opacity-80 font-kungfu"
                     style={{ color: 'var(--color-white)' }}
                     onMouseEnter={(e) =>
-                      (e.target.style.color = 'var(--color-accent-gold)')
+                      ((e.target as HTMLButtonElement).style.color = 'var(--color-accent-gold)')
                     }
                     onMouseLeave={(e) =>
-                      (e.target.style.color = 'var(--color-white)')
+                      ((e.target as HTMLButtonElement).style.color = 'var(--color-white)')
                     }
                   >
                     {item.label}
@@ -116,14 +116,14 @@ export function Navbar() {
                         : 'transparent',
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.backgroundColor =
+                      (e.target as HTMLButtonElement).style.backgroundColor =
                         'rgba(255, 255, 255, 0.2)';
-                      e.target.style.color = 'var(--color-accent-gold)';
+                      (e.target as HTMLButtonElement).style.color = 'var(--color-accent-gold)';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.backgroundColor =
+                      (e.target as HTMLButtonElement).style.backgroundColor =
                         'rgba(255, 255, 255, 0.1)';
-                      e.target.style.color = 'var(--color-white)';
+                      (e.target as HTMLButtonElement).style.color = 'var(--color-white)';
                     }}
                   >
                     {item.label}

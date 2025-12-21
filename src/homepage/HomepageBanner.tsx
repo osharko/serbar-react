@@ -95,12 +95,12 @@ export function HomepageBanner() {
                 color: 'var(--color-white)',
               }}
               onMouseEnter={(e) => {
-                e.target.style.backgroundColor = 'var(--color-brand-dark)';
-                e.target.style.transform = 'scale(1.05)';
+                (e.target as HTMLButtonElement).style.backgroundColor = 'var(--color-brand-dark)';
+                (e.target as HTMLButtonElement).style.transform = 'scale(1.05)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.backgroundColor = 'var(--color-brand-primary)';
-                e.target.style.transform = 'scale(1)';
+                (e.target as HTMLButtonElement).style.backgroundColor = 'var(--color-brand-primary)';
+                (e.target as HTMLButtonElement).style.transform = 'scale(1)';
               }}
             >
               Inizia il Tuo Percorso

@@ -1,6 +1,8 @@
-export function ClassCard({ name, time, type }) {
-  const getClassColor = (type) => {
-    const colors = {
+import { CoursesType, ClassCardProps, ColorConfig } from '../../commons/Types';
+
+export function ClassCard({ name, time, type }: ClassCardProps) {
+  const getClassColor = (type: CoursesType): ColorConfig => {
+    const colors: Record<CoursesType, ColorConfig> = {
       kids: {
         bg: 'var(--color-class-kids-bg)',
         text: 'var(--color-class-kids-text)',

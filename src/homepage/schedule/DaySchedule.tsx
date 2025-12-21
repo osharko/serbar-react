@@ -1,6 +1,7 @@
 import { ClassCard } from './ClassCard';
+import { DayScheduleProps } from '../../commons/Types';
 
-export function DaySchedule({ day, classes }) {
+export function DaySchedule({ day, classes }: DayScheduleProps) {
   return (
     <div
       className="p-4 md:p-6 rounded-lg"
