@@ -29,14 +29,70 @@ export function Contact() {
                 Contattaci per maggiori informazioni sui corsi e le iscrizioni.
               </p>
               <div className="space-y-2 mb-4 md:mb-6 text-sm md:text-base">
+                {/* Email */}
                 <p>
                   Email:{' '}
                   <a href="mailto:asdserbarkungfu@gmail.com">
                     asdserbarkungfu@gmail.com
                   </a>
                 </p>
+                {/* Telephone */}
                 <p>
                   Telefono: <a href="tel:328-8825980">+39 328 8825980</a>
+                </p>
+                <p className="flex justify-center items-center space-x-6">
+                  {/* Facebook */}
+                  <a
+                    href="https://it-it.facebook.com/people/Arti-Marziali-Ser-Bar-Kung-Fu/100054598953153/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:scale-125 transition-transform duration-300"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/facebook.svg"
+                      alt="Facebook"
+                      width="30"
+                    />
+                  </a>
+                  {/* Instagram */}
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:scale-125 transition-transform duration-300"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/instagram.svg"
+                      width="30"
+                      alt="Instagram"
+                    />
+                  </a>
+                  {/* Youtube */}
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:scale-125 transition-transform duration-300"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/youtube.svg"
+                      width="30"
+                      alt="Youtube"
+                    />
+                  </a>
+                  {/* GMaps */}
+                  <a
+                    href="https://maps.app.goo.gl/b45dy4dk4WWX5QtG8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:scale-125 transition-transform duration-300"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-maps.svg"
+                      width="20"
+                      alt="Google Maps"
+                    />
+                  </a>
                 </p>
               </div>
             </div>
@@ -60,29 +116,6 @@ export function Contact() {
                   title="Mappa Ser.Bar. - Palazzetto dello Sport San Benedetto del Tronto"
                 ></iframe>
               </div>
-            </div>
-
-            <div className="text-center mt-4 md:mt-6">
-              <a
-                href="https://maps.app.goo.gl/b45dy4dk4WWX5QtG8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-5 md:px-6 py-2 md:py-3 rounded-lg font-semibold transition text-sm md:text-base"
-                style={{
-                  backgroundColor: 'var(--color-white)',
-                  color: 'var(--color-brand-primary)',
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLAnchorElement).style.backgroundColor = 'var(--color-accent-gold)';
-                  (e.target as HTMLAnchorElement).style.color = 'var(--color-brand-dark)';
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLAnchorElement).style.backgroundColor = 'var(--color-white)';
-                  (e.target as HTMLAnchorElement).style.color = 'var(--color-brand-primary)';
-                }}
-              >
-                Apri in Google Maps
-              </a>
             </div>
           </div>
         </div>
