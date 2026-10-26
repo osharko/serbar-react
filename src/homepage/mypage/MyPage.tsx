@@ -96,7 +96,7 @@ export function MyPage() {
     setError(null);
 
     supabase
-      .rpc('get_my_area')
+      .rpc('link_my_profile')
       .then(({ data, error: rpcError }) => {
         if (!active) return;
         if (rpcError) {
