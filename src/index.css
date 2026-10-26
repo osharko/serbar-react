@@ -1,6 +1,52 @@
 @import 'tailwindcss';
 
 /*  */
+/* ============================================ */
+/* CINTURE - sfondo = colore cintura,           */
+/* testo = colore della cintura successiva      */
+/* ============================================ */
+.grade-bianca {
+  --grade-bg: var(--belt-white);
+  --grade-text: var(--belt-yellow);
+}
+.grade-giallo {
+  --grade-bg: var(--belt-yellow);
+  --grade-text: var(--belt-orange);
+}
+.grade-arancio {
+  --grade-bg: var(--belt-orange);
+  --grade-text: var(--belt-red);
+}
+.grade-rosso {
+  --grade-bg: var(--belt-red);
+  --grade-text: var(--belt-green);
+}
+.grade-verde {
+  --grade-bg: var(--belt-green);
+  --grade-text: var(--belt-blue);
+}
+.grade-blu {
+  --grade-bg: var(--belt-blue);
+  --grade-text: var(--belt-indigo);
+}
+.grade-indaco {
+  --grade-bg: var(--belt-indigo);
+  --grade-text: var(--belt-black);
+}
+.grade-nero-1,
+.grade-nero-2,
+.grade-nero-3,
+.grade-nero-4,
+.grade-nero-5,
+.grade-maestro {
+  --grade-bg: var(--belt-black);
+  --grade-text: var(--belt-white);
+}
+.grade-default {
+  --grade-bg: var(--color-brand-primary);
+  --grade-text: var(--color-white);
+}
+
 .font-kungfu {
   font-family: 'Shojumaru', system-ui;
   font-weight: normal;
@@ -47,6 +93,16 @@
 
   /* Ombre */
   --palette-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Cinture */
+  --belt-white: #ffffff;
+  --belt-yellow: #eab308;
+  --belt-orange: #f97316;
+  --belt-red: #dc2626;
+  --belt-green: #16a34a;
+  --belt-blue: #2563eb;
+  --belt-indigo: #4f46e5;
+  --belt-black: #111827;
 
   /* ============================================ */
   /* COLORI SEMANTICI - Riutilizzano la palette */

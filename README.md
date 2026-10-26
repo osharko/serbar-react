@@ -22,6 +22,8 @@ npm run format
 
 Node 22 o superiore.
 
+Per l'area riservata copia `.env.example` in `.env.local` (contiene solo valori pubblici).
+
 ## Deploy
 
 Il sito viene pubblicato automaticamente ad ogni push su `main` dal workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). Non c'è nulla da committare in `dist/`: build e publish avvengono su GitHub.
@@ -29,6 +31,10 @@ Il sito viene pubblicato automaticamente ad ogni push su `main` dal workflow [`.
 - Produzione: https://serbar.it
 - Anteprima GitHub Pages: `https://osharko.github.io/serbar-react/` (redirige su serbar.it quando il custom domain è attivo)
 - Il `base` di Vite è calcolato automaticamente da `configure-pages` (`/serbar-react/` in anteprima, `/` su dominio custom)
+
+## Area riservata
+
+`/mypage` è raggiungibile dal link "Area riservata" nella navbar. Login solo con Google (nessuna password); l'accesso ai contenuti è filtrato per grado tramite RLS. La pagina mostra il nome del socio, il grado e i contenuti associati. Un account Google non presente in `members` vede "Accesso non abilitato".
 
 ## Infrastruttura e provider
 

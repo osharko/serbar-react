@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logoSerbar from '../assets/logoserbar.png';
 
 export function Navbar() {
@@ -60,6 +61,21 @@ export function Navbar() {
                   </button>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/mypage"
+                  className="transition hover:opacity-80 font-kungfu"
+                  style={{ color: 'var(--color-white)' }}
+                  onMouseEnter={(e) =>
+                    ((e.target as HTMLAnchorElement).style.color = 'var(--color-accent-gold)')
+                  }
+                  onMouseLeave={(e) =>
+                    ((e.target as HTMLAnchorElement).style.color = 'var(--color-white)')
+                  }
+                >
+                  Area riservata
+                </Link>
+              </li>
             </ul>
 
             {/* Mobile Burger Menu Button */}
@@ -130,6 +146,16 @@ export function Navbar() {
                   </button>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/mypage"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block w-full text-left px-4 py-3 transition rounded"
+                  style={{ color: 'var(--color-white)' }}
+                >
+                  Area riservata
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
