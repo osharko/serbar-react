@@ -117,7 +117,10 @@ export function MyPage() {
     const redirectTo = `${window.location.origin}${import.meta.env.BASE_URL}mypage`;
     const { error: authError } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo },
+      options: {
+        redirectTo,
+        queryParams: { prompt: 'select_account' },
+      },
     });
     if (authError) setError(authError.message);
   };
@@ -127,6 +130,14 @@ export function MyPage() {
     await supabase.auth.signOut();
     setSession(null);
     setArea(undefined);
+  };
+
+  // Esce e riapre il selettore account Google: utile quando si è entrati
+  // con l'email sbagliata.
+  const switchAccount = async () => {
+    if (!supabase) return;
+    await supabase.auth.signOut();
+    await login();
   };
 
   if (configError) {
@@ -211,6 +222,8 @@ export function MyPage() {
   }
 
   if (area === null) {
+    const email = session.user.email ?? 'email non disponibile';
+
     return (
       <Centered>
         <div className="text-center max-w-sm">
@@ -221,17 +234,37 @@ export function MyPage() {
             Accesso non abilitato
           </h1>
           <p
+            className="text-sm mb-2"
+            style={{ color: 'var(--color-text-secondary)' }}
+          >
+            Questo account Google non è associato a nessun socio:
+          </p>
+          <p
+            className="text-sm font-semibold mb-4 break-all"
+            style={{ color: BRAND }}
+          >
+            {email}
+          </p>
+          <p
             className="text-sm mb-6"
             style={{ color: 'var(--color-text-secondary)' }}
           >
-            Questo account Google non è associato a nessun socio. Contatta la
-            segreteria della palestra.
+            Se non è la tua email, accedi con l'account corretto (per i minori
+            quello del genitore). Altrimenti contatta la segreteria della
+            palestra.
           </p>
           {error && (
             <p className="text-xs mb-4" style={{ color: '#b91c1c' }}>
               {error}
             </p>
           )}
+          <button
+            onClick={switchAccount}
+            className="w-full px-4 py-3 rounded-lg font-semibold mb-3 transition hover:opacity-90"
+            style={{ backgroundColor: BRAND, color: 'var(--color-white)' }}
+          >
+            Accedi con un altro account
+          </button>
           <button
             onClick={logout}
             className="text-sm underline opacity-70 hover:opacity-100"
