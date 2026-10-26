@@ -234,24 +234,15 @@ export function MyPage() {
             Accesso non abilitato
           </h1>
           <p
-            className="text-sm mb-2"
-            style={{ color: 'var(--color-text-secondary)' }}
-          >
-            Questo account Google non è associato a nessun socio:
-          </p>
-          <p
-            className="text-sm font-semibold mb-4 break-all"
-            style={{ color: BRAND }}
-          >
-            {email}
-          </p>
-          <p
             className="text-sm mb-6"
             style={{ color: 'var(--color-text-secondary)' }}
           >
-            Se non è la tua email, accedi con l'account corretto (per i minori
-            quello del genitore). Altrimenti contatta la segreteria della
-            palestra.
+            L'email{' '}
+            <span className="font-semibold break-all" style={{ color: BRAND }}>
+              {email}
+            </span>{' '}
+            non è censita nei sistemi. Contattare la rappresentante della
+            palestra per ulteriori informazioni.
           </p>
           {error && (
             <p className="text-xs mb-4" style={{ color: '#b91c1c' }}>
