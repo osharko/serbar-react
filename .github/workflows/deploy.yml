@@ -48,8 +48,15 @@ jobs:
 
       # GitHub Pages non ha rewrite lato server: 404.html serve la stessa SPA
       # così /mypage funziona anche su refresh o link diretto.
+      # Le pagine servite con 404 (es. /mypage) non devono essere indicizzate:
+      # niente canonical e robots/googlebot in noindex.
       - name: SPA fallback
-        run: cp dist/index.html dist/404.html
+        run: |
+          sed \
+            -e 's#<meta name="robots" content="index, follow" />#<meta name="robots" content="noindex, nofollow" />#' \
+            -e 's#<meta name="googlebot" content="index, follow" />#<meta name="googlebot" content="noindex, nofollow" />#' \
+            -e 's#<link rel="canonical" href="https://serbar.it/" />##' \
+            dist/index.html > dist/404.html
 
       - uses: actions/upload-pages-artifact@v5
         with:

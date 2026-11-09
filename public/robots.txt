@@ -26,3 +26,6 @@ Disallow: /src/
 Disallow: /node_modules/
 Disallow: /*.json$
 Disallow: /*.config.js$
+
+# Area riservata: non deve essere indicizzata
+Disallow: /mypage

@@ -64,6 +64,7 @@ export function Navbar() {
               <li>
                 <Link
                   to="/mypage"
+                  rel="nofollow"
                   className="transition hover:opacity-80 font-kungfu"
                   style={{ color: 'var(--color-white)' }}
                   onMouseEnter={(e) =>
@@ -149,6 +150,7 @@ export function Navbar() {
               <li>
                 <Link
                   to="/mypage"
+                  rel="nofollow"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full text-left px-4 py-3 transition rounded"
                   style={{ color: 'var(--color-white)' }}
